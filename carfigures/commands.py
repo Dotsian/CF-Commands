@@ -25,18 +25,19 @@ async def stats(interaction: discord.Interaction, countryball: BallEnabledTransf
     embed = discord.Embed(
         title=f"{emoji} {countryball.country} Information:",
         description=(
-            f"⋄ **Short Name**: {countryball.short_name}\n"
-            f"⋄ **Catch Names**: {countryball.catch_names}\n"
-            f"⋄ **Regime**: {countryball.regime}\n"
-            f"⋄ **Economy**: {countryball.economy}\n"
-            f"⋄ **Rarity**: {countryball.rarity}\n"
-            f"⋄ **Attack**: {countryball.attack}\n"
-            f"⋄ **Health**: {countryball.health}\n"
-            f"⋄ **Capacity Name**: {countryball.capacity_name}\n"
-            f"⋄ **Capacity Description**: {countryball.capacity_description}\n"
-            f"⋄ **Image Credits**: {countryball.credits}\n"
+            f"⋄ **Short Name:** {countryball.short_name}\n"
+            f"⋄ **Catch Names:** {countryball.catch_names}\n"
+            f"⋄ **Regime:** {countryball.regime}\n"
+            f"⋄ **Economy:** {countryball.economy}\n"
+            f"⋄ **Rarity:** {countryball.rarity}\n"
+            f"⋄ **Attack:** {countryball.attack}\n"
+            f"⋄ **Health:** {countryball.health}\n"
+            f"⋄ **Capacity Name:** {countryball.capacity_name}\n"
+            f"⋄ **Capacity Description:** {countryball.capacity_description}\n"
+            f"⋄ **Image Credits:** {countryball.credits}\n"
         ).replace("⋄", CONFIG["Line Symbol"]),
         color=CONFIG["Embed Color"]
     )
 
     await interaction.response.send_message(embed=embed)
+
